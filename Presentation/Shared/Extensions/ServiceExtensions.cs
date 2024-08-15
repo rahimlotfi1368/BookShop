@@ -16,7 +16,5 @@ public static class ServiceExtensions
             })
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
             .AddDataAnnotationsLocalization();
-
-        //services.AddControllersWithViews();
     }
 }
