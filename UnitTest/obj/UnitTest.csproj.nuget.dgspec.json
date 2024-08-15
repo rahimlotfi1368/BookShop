@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj": {}
+    "C:\\Users\\ra-lotfi\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj": {
+    "C:\\Users\\ra-lotfi\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\ra-lotfi\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj",
         "projectName": "UnitTest",
-        "projectPath": "D:\\MyProjects\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj",
-        "packagesPath": "C:\\Users\\Notebook\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\RiderProjects\\BookShop\\UnitTest\\obj\\",
+        "projectPath": "C:\\Users\\ra-lotfi\\RiderProjects\\BookShop\\UnitTest\\UnitTest.csproj",
+        "packagesPath": "C:\\Users\\ra-lotfi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ra-lotfi\\RiderProjects\\BookShop\\UnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Notebook\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Users\\ra-lotfi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -27,9 +25,8 @@
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "http://10.0.85.160:36200/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400-preview.0.24324.5/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
