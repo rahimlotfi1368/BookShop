@@ -9,7 +9,7 @@ public class LandingController : Controller
     {
         //this is new branch
         
-        ViewData["data"] = "Hello";
+        @ViewData["Title"] = "قالب فروشگاه آنلاین کتاب | نت کپی";
         return View();
     }
 }
