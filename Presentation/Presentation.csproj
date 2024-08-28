@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <Folder Include="Features\Books\" />
-      <Folder Include="Features\Security\Query\" />
     </ItemGroup>
 
     <ItemGroup>

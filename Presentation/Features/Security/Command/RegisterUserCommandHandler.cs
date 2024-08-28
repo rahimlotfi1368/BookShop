@@ -12,7 +12,7 @@ namespace Presentation.Features.Security.Command;
 public record RegisterUserCommand(string Username, string Password, string Role) : IRequest<RegisterUserResponse>;
 
 public class RegisterUserCommandHandler(
-    IValidator<RegisterUserCommand> registerUserCommandValidator,
+    IValidator<RegisterUserCommand> validator,
     IUnitOfWork  unitOfWork,
     IMapper mapper)
     : IRequestHandler<RegisterUserCommand, RegisterUserResponse>
@@ -24,7 +24,7 @@ public class RegisterUserCommandHandler(
     { 
         RegisterUserResponse registerUserResponse ;
         
-       var validationResult = await registerUserCommandValidator.ValidateAsync(request, cancellationToken);
+       var validationResult = await validator.ValidateAsync(request, cancellationToken);
        
        if (validationResult.IsValid == false && validationResult.Errors.Count > 0)
        {

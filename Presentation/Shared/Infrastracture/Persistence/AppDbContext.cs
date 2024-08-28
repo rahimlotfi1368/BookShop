@@ -27,6 +27,12 @@ public class AppDbContext:DbContext
             
             entity.Property(e => e.Id)
                 .ValueGeneratedOnAdd();
+
+            entity.Property(e => e.CreateAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+            
+            entity.Property(e => e.UpdateAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
             
             entity.Property(e => e.Username)
                 .IsRequired()

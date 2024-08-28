@@ -1,6 +1,6 @@
 ﻿namespace Presentation.Shared.Domain.Entities.Common;
 
-public class BaseEntity
+public record BaseEntity
 {
     public int Id { get; init; }
     public DateTime CreateAt { get; set; }

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Presentation.Features.Security.Command;
+using Presentation.Features.Security.Query;
 using Presentation.Shared.Application.Contracts;
 using Presentation.Shared.Application.Mappers;
 using Presentation.Shared.Customizations;
@@ -33,8 +34,10 @@ public static class ServiceExtensions
         services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options =>
             {
+                options.Cookie.Name = "MyCookieAuth";
                 options.LoginPath = "/Account/Login";
                 options.AccessDeniedPath = "/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
             });
     }
     
@@ -54,7 +57,9 @@ public static class ServiceExtensions
 
     public static void AddBookShopServices(this IServiceCollection services)
     {
+        services.AddHttpContextAccessor();
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped<IUserRepository,UserRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
     public static void AddBookShopAutoMapper(this IServiceCollection services)

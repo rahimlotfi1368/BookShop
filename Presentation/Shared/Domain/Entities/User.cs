@@ -3,7 +3,7 @@ using Presentation.Shared.Domain.Entities.Common;
 
 namespace Presentation.Shared.Domain.Entities;
 
-public class User:BaseEntity
+public record User:BaseEntity
 {
     public string Username { get; set; }
     

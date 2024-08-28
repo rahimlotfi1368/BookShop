@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Presentation.Features.Security.Query;
 using Presentation.Shared.Application.Contracts;
 using Presentation.Shared.Domain.Entities.Common;
 using Presentation.Shared.Infrastracture.Persistence;
@@ -29,6 +30,8 @@ public class UnitOfWork : IUnitOfWork
         return (IGenericRepository<TEntity>)_repositories[type];
     }
 
+    /// <inheritdoc />
+    public IUserRepository UserRepository() => new UserRepository(_context);
     public async Task<int> CompleteAsync()
     {
         return await _context.SaveChangesAsync();
